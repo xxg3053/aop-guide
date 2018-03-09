@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author kenfo
  * @version V1.0
  * @Package com.kenfo.aopguide
- * @Description: TODO
+ * @Description: 启动
  * @date 2018/3/9 下午10:52
  */
 @SpringBootApplication

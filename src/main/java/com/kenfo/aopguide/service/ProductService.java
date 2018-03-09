@@ -1,6 +1,7 @@
 package com.kenfo.aopguide.service;
 
 import com.kenfo.aopguide.domain.Product;
+import com.kenfo.aopguide.security.AdminOnly;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +25,8 @@ public class ProductService {
         System.out.println("insert product");
     }
 
+
+    @AdminOnly
     public void delete(Long id){
         System.out.println("delete product");
     }

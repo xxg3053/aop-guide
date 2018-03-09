@@ -28,11 +28,23 @@ public class ProductServiceTest {
         Product p = new Product();
         productService.insert(p);
     }
+
     @Test
-    public void insert() {
+    public void adminInserTest(){
+        CurrentSetHolder.set("admin");
+        Product p = new Product();
+        productService.insert(p);
+    }
+
+    @Test(expected = Exception.class)
+    public void annoDeleteTest(){
+        CurrentSetHolder.set("tom");
+        productService.delete(1L);
     }
 
     @Test
-    public void delete() {
+    public void adminDeleteTest(){
+        CurrentSetHolder.set("admin");
+        productService.delete(1L);
     }
 }
